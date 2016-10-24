@@ -6,52 +6,59 @@
   <link rel="stylesheet" href="style.css" media="screen" title="no title">
   <script src="js/jquery-3.1.0.min.js"></script>
   <script src="css/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/validator.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="container" id="logo">
-      <a class='logo' href="index.php">Inventory Management System</a>
+      <a class='logo' href="admin_dashboard.php">Inventory Management System</a>
       <h1>Add Owner</h1>
     </div>
 
 <div class="box-section">
   <br><br>
-  <form class="form-horizontal" role="form" id="add_owner" method="POST" action="add_person_details.php">
+  <form class="form-horizontal" role="form" id="add_owner" method="POST" action="add_person_details.php" data-toggle="validator">
     <div class="container">
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Full Name :</label>
         <div class="col-xs-4">
-          <input class="form-control" type="text" placeholder="Enter Full Name" name="full_name"  id="fullname">
+          <input class="form-control" type="text" placeholder="Enter Full Name" name="full_name"  id="fullname"  data-error="Please enter Fullname" required>
+          <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Username :</label>
           <div class="col-xs-4">
-            <input class="form-control" type="text"  placeholder="Enter Userame" name="username" id="user_name">
+            <input class="form-control" type="text"  placeholder="Enter Userame" name="username" id="user_name" data-error="Please enter Username" required>
+            <div class="help-block with-errors"></div>
           </div>
       </div>
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Password :</label>
         <div class="col-xs-4">
-            <input class="form-control" type="password" placeholder="Enter Password" name="password" id="password">
+            <input class="form-control" type="password" placeholder="Enter Password" name="password" id="password" data-error="Please enter Password" required>
+            <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Password :</label>
         <div class="col-xs-4">
-          <input class="form-control" type="password" placeholder="Re-enter Password" name="repassword" id="repass">
+          <input class="form-control" type="password" placeholder="Re-enter Password" name="repassword" id="repass" data-match="#password" data-match-error="Passwords don't match" data-error="Please enter Password" required>
+          <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Contact Number :</label>
         <div class="col-xs-4">
-          <input class="form-control" type="text" placeholder="Enter Contact Number" name="contact_no" id="contacno">
+          <input class="form-control" type="text" placeholder="Enter Contact Number" name="contact_no" id="contacno" data-error="Please enter Contact Number" required>
+          <div class="help-block with-errors"></div>
         </div>
       </div>
       <div class="form-group row">
         <label for="example-text-input" class="col-xs-4 col-form-label text-right">Address :</label>
         <div class="col-xs-4">
-          <input class="form-control" type="text" placeholder="Enter Address" name="address" id="address">
+          <input class="form-control" type="text" placeholder="Enter Address" name="address" id="address" data-error="Please enter Address" required>
+          <div class="help-block with-errors"></div>
         </div>
       </div>
 
